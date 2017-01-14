@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C8675A61E217CC500221662 /* CascadeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C8675A41E217CC500221662 /* CascadeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C8675E11E217D6900221662 /* Cascade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8675E01E217D6900221662 /* Cascade.storyboard */; };
+		9C8675E31E217D9100221662 /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8675E21E217D9100221662 /* CascadeController.swift */; };
+		9C8675E71E2182A200221662 /* UIView+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8675E61E2182A200221662 /* UIView+Extras.swift */; };
+		9C8675F41E2189E300221662 /* UIScreen+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8675F31E2189E300221662 /* UIScreen+Extras.swift */; };
+		9C8675F61E218B2B00221662 /* CascadeDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8675F51E218B2B00221662 /* CascadeDividerView.swift */; };
+		9CABB4A31E2AC5E10030F42E /* CascadableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4A21E2AC5E10030F42E /* CascadableNavigationController.swift */; };
+		9CABB4A51E2AD1450030F42E /* CascadeController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */; };
+		9CABB4A71E2AD1B60030F42E /* UIImage+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C8675A11E217CC500221662 /* CascadeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CascadeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C8675A41E217CC500221662 /* CascadeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CascadeKit.h; sourceTree = "<group>"; };
+		9C8675A51E217CC500221662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C8675E01E217D6900221662 /* Cascade.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Cascade.storyboard; path = "Cascade Controller/Cascade.storyboard"; sourceTree = "<group>"; };
+		9C8675E21E217D9100221662 /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CascadeController.swift; path = "Cascade Controller/CascadeController.swift"; sourceTree = "<group>"; };
+		9C8675E61E2182A200221662 /* UIView+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extras.swift"; path = "Helpers/Extensions/UIView+Extras.swift"; sourceTree = "<group>"; };
+		9C8675F31E2189E300221662 /* UIScreen+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extras.swift"; sourceTree = "<group>"; };
+		9C8675F51E218B2B00221662 /* CascadeDividerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CascadeDividerView.swift; path = "Cascade Controller/CascadeDividerView.swift"; sourceTree = "<group>"; };
+		9CABB4A21E2AC5E10030F42E /* CascadableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadableNavigationController.swift; sourceTree = "<group>"; };
+		9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CascadeController+Animations.swift"; sourceTree = "<group>"; };
+		9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extras.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C86759D1E217CC500221662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C8675971E217CC500221662 = {
+			isa = PBXGroup;
+			children = (
+				9C8675A31E217CC500221662 /* CascadeKit */,
+				9C8675A21E217CC500221662 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C8675A21E217CC500221662 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C8675A11E217CC500221662 /* CascadeKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C8675A31E217CC500221662 /* CascadeKit */ = {
+			isa = PBXGroup;
+			children = (
+				9C8675E41E21828500221662 /* Helpers */,
+				9C8675DF1E217D4700221662 /* CascadeController */,
+				9C8675A41E217CC500221662 /* CascadeKit.h */,
+				9C8675A51E217CC500221662 /* Info.plist */,
+			);
+			path = CascadeKit;
+			sourceTree = "<group>";
+		};
+		9C8675DF1E217D4700221662 /* CascadeController */ = {
+			isa = PBXGroup;
+			children = (
+				9C8675E01E217D6900221662 /* Cascade.storyboard */,
+				9C8675E21E217D9100221662 /* CascadeController.swift */,
+				9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */,
+				9C8675F51E218B2B00221662 /* CascadeDividerView.swift */,
+				9CABB4A21E2AC5E10030F42E /* CascadableNavigationController.swift */,
+			);
+			name = CascadeController;
+			sourceTree = "<group>";
+		};
+		9C8675E41E21828500221662 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C8675E51E21828E00221662 /* Extensions */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9C8675E51E21828E00221662 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */,
+				9C8675F31E2189E300221662 /* UIScreen+Extras.swift */,
+				9C8675E61E2182A200221662 /* UIView+Extras.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9C86759E1E217CC500221662 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C8675A61E217CC500221662 /* CascadeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9C8675A01E217CC500221662 /* CascadeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C8675A91E217CC500221662 /* Build configuration list for PBXNativeTarget "CascadeKit" */;
+			buildPhases = (
+				9C86759C1E217CC500221662 /* Sources */,
+				9C86759D1E217CC500221662 /* Frameworks */,
+				9C86759E1E217CC500221662 /* Headers */,
+				9C86759F1E217CC500221662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CascadeKit;
+			productName = CascadeKit;
+			productReference = 9C8675A11E217CC500221662 /* CascadeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C8675981E217CC500221662 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kevin Tulod";
+				TargetAttributes = {
+					9C8675A01E217CC500221662 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N7NWYQNMN4;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9C86759B1E217CC500221662 /* Build configuration list for PBXProject "CascadeKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C8675971E217CC500221662;
+			productRefGroup = 9C8675A21E217CC500221662 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C8675A01E217CC500221662 /* CascadeKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C86759F1E217CC500221662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C8675E11E217D6900221662 /* Cascade.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C86759C1E217CC500221662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C8675E31E217D9100221662 /* CascadeController.swift in Sources */,
+				9CABB4A51E2AD1450030F42E /* CascadeController+Animations.swift in Sources */,
+				9CABB4A71E2AD1B60030F42E /* UIImage+Extras.swift in Sources */,
+				9C8675F41E2189E300221662 /* UIScreen+Extras.swift in Sources */,
+				9CABB4A31E2AC5E10030F42E /* CascadableNavigationController.swift in Sources */,
+				9C8675E71E2182A200221662 /* UIView+Extras.swift in Sources */,
+				9C8675F61E218B2B00221662 /* CascadeDividerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9C8675A71E217CC500221662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C8675A81E217CC500221662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C8675AA1E217CC500221662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N7NWYQNMN4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CascadeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintulod.CascadeKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9C8675AB1E217CC500221662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N7NWYQNMN4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CascadeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevintulod.CascadeKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C86759B1E217CC500221662 /* Build configuration list for PBXProject "CascadeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C8675A71E217CC500221662 /* Debug */,
+				9C8675A81E217CC500221662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C8675A91E217CC500221662 /* Build configuration list for PBXNativeTarget "CascadeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C8675AA1E217CC500221662 /* Debug */,
+				9C8675AB1E217CC500221662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C8675981E217CC500221662 /* Project object */;
+}
