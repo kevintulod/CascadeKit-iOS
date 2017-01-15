@@ -12,6 +12,7 @@ extension CascadeController {
     
     typealias AnimationStageHandler = () -> Void
     
+    /// Performs a cascade animation in the forward direction
     internal func performForwardCascadeAnimation(cascadeController: UIViewController, preAnimation: AnimationStageHandler?, postAnimation: AnimationStageHandler?, completion: AnimationStageHandler?) {
         
         // Add image representations

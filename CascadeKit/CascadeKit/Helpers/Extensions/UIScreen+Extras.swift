@@ -10,6 +10,7 @@ import UIKit
 
 extension UIScreen {
     
+    /// Returns the exact value of one pixel in the current screen's scale
     var onePx: CGFloat {
         return CGFloat(1)/nativeScale
     }

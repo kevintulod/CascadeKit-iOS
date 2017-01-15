@@ -15,12 +15,15 @@ protocol CascadeDividerDelegate {
     
 }
 
+/// Defines the behavior of the center divider between the master/detail views
 class CascadeDividerView: UIView {
 
+    /// Sets the margin on either side of the divider that responds to touch
     static let touchMargin = -CGFloat(10)
-    var lastCenter = CGPoint(x: 0, y: 0)
-    var delegate: CascadeDividerDelegate?
+    internal var lastCenter = CGPoint(x: 0, y: 0)
+    internal var delegate: CascadeDividerDelegate?
     
+    /// Overrides the point(inside:) function to allow the divider to respond to touches within `touchMargin` pixels on either side
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         return bounds.insetBy(dx: CascadeDividerView.touchMargin, dy: 0).contains(point)
     }
@@ -33,11 +36,13 @@ class CascadeDividerView: UIView {
         backgroundColor = .lightGray
     }
     
-    func setupPanGestures() {
+    /// Sets up the gesture recognizer for dragging
+    internal func setupPanGestures() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(CascadeDividerView.detectPan(recognizer:)))
         addGestureRecognizer(pan)
     }
     
+    /// Responder for the UIPanGestureRecognizer that controls the dragging behavior of the divider
     internal func detectPan(recognizer: UIPanGestureRecognizer) {
         
         switch recognizer.state {

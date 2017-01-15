@@ -9,7 +9,7 @@
 import UIKit
 import CascadeKit
 
-class CascadingNavigationController: CascadableNavigationController {
+class CascadingNavigationController: UINavigationController {
 
     init(tableNumber: Int) {
         let tableController = CascadingTableViewController(panelNumber: tableNumber)

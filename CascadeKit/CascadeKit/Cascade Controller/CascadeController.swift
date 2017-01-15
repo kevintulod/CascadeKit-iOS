@@ -17,7 +17,7 @@ public class CascadeController: UIViewController {
     @IBOutlet weak var dividerViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var dividerViewPositionConstraint: NSLayoutConstraint!
     
-    internal weak var leftController: CascadableNavigationController? {
+    internal weak var leftController: UINavigationController? {
         didSet {
             guard let leftController = leftController else {
                 return
@@ -27,7 +27,7 @@ public class CascadeController: UIViewController {
         }
     }
     
-    internal weak var rightController: CascadableNavigationController? {
+    internal weak var rightController: UINavigationController? {
         didSet {
             guard let rightController = rightController else {
                 return
@@ -64,16 +64,16 @@ public class CascadeController: UIViewController {
     
     public override func addChildViewController(_ childController: UIViewController) {
         super.addChildViewController(childController)
-        (childController as? CascadableNavigationController)?.cascadeController = self
     }
     
     /// Sets up the cascade controller with the initial view controllers
-    public func setup(first: CascadableNavigationController, second: CascadableNavigationController) {
+    public func setup(first: UINavigationController, second: UINavigationController) {
         leftController = first
         rightController = second
     }
     
-    public func cascadeViewController(_ cascadeController: CascadableNavigationController) {
+    /// Cascades the view controller to the top of the stack
+    public func cascadeViewController(_ cascadeController: UINavigationController) {
         performForwardCascadeAnimation(cascadeController: cascadeController, preAnimation: { Void in
             self.leftController = self.rightController
             
