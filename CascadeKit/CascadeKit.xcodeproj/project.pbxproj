@@ -25,11 +25,11 @@
 		9C8675E01E217D6900221662 /* Cascade.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Cascade.storyboard; path = "Cascade Controller/Cascade.storyboard"; sourceTree = "<group>"; };
 		9C8675E21E217D9100221662 /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CascadeController.swift; path = "Cascade Controller/CascadeController.swift"; sourceTree = "<group>"; };
 		9C8675E61E2182A200221662 /* UIView+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extras.swift"; path = "Helpers/Extensions/UIView+Extras.swift"; sourceTree = "<group>"; };
-		9C8675F31E2189E300221662 /* UIScreen+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extras.swift"; sourceTree = "<group>"; };
+		9C8675F31E2189E300221662 /* UIScreen+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIScreen+Extras.swift"; path = "Helpers/Extensions/UIScreen+Extras.swift"; sourceTree = "<group>"; };
 		9C8675F51E218B2B00221662 /* CascadeDividerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CascadeDividerView.swift; path = "Cascade Controller/CascadeDividerView.swift"; sourceTree = "<group>"; };
-		9CABB4A21E2AC5E10030F42E /* CascadableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadableNavigationController.swift; sourceTree = "<group>"; };
-		9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CascadeController+Animations.swift"; sourceTree = "<group>"; };
-		9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extras.swift"; sourceTree = "<group>"; };
+		9CABB4A21E2AC5E10030F42E /* CascadableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CascadableNavigationController.swift; path = "Cascade Controller/CascadableNavigationController.swift"; sourceTree = "<group>"; };
+		9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CascadeController+Animations.swift"; path = "Cascade Controller/CascadeController+Animations.swift"; sourceTree = "<group>"; };
+		9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Extras.swift"; path = "Helpers/Extensions/UIImage+Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
