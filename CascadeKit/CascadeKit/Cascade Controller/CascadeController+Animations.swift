@@ -15,27 +15,15 @@ extension CascadeController {
     /// Performs a cascade animation in the forward direction
     internal func performForwardCascadeAnimation(cascadeController: UIViewController, preAnimation: AnimationStageHandler?, postAnimation: AnimationStageHandler?, completion: AnimationStageHandler?) {
         
-        // Add image representations
-        let leftImageView = UIImageView(frame: leftViewContainer.frame)
-        leftImageView.image = UIImage.image(fromView: leftController?.view)
-        view.addSubview(leftImageView)
+        // Add images of the current state
+        let imageViews = imageViewsForCurrentState()
+        view.addSubviews([imageViews.left, imageViews.right])
         
-        let rightImageView = UIImageView(frame: rightViewContainer.frame)
-        rightImageView.image = UIImage.image(fromView: rightController?.view)
-        view.addSubview(rightImageView)
-        
-        // Add cascading view
+        // Add cascading view image
         var cascadeFrame = rightViewContainer.frame
         cascadeFrame.origin.x += cascadeFrame.width
-        
-        let cascadeTempView = UIView(frame: cascadeFrame)
-        cascadeTempView.fill(withSubview: cascadeController.view)
-        view.addSubview(cascadeTempView)
-        
-        let cascadeImageView = UIImageView(frame: cascadeFrame)
-        cascadeImageView.image = UIImage.image(fromView: cascadeTempView)
+        let cascadeImageView = imageViewForPendingView(cascadeController.view, targetFrame: cascadeFrame)
         view.addSubview(cascadeImageView)
-        cascadeTempView.removeFromSuperview()
         
         // Calculate target frames
         let rightImageViewTargetFrame = leftViewContainer.frame
@@ -51,24 +39,49 @@ extension CascadeController {
         
         UIView.animate(withDuration: animationDuration, delay: 0, options: [.curveEaseOut],
         animations: {
-            leftImageView.frame = leftImageViewTargetFrame
-            rightImageView.frame = rightImageViewTargetFrame
+            imageViews.left.frame = leftImageViewTargetFrame
+            imageViews.right.frame = rightImageViewTargetFrame
             cascadeImageView.frame = cascadeImageViewTargetFrame
             
-            rightImageView.alpha = 0.5
+            imageViews.right.alpha = 0.5
             self.leftViewContainer.alpha = 1
             self.rightViewContainer.alpha = 1
             
         }, completion: { success in
             postAnimation?()
             
-            leftImageView.removeFromSuperview()
-            rightImageView.removeFromSuperview()
+            imageViews.left.removeFromSuperview()
+            imageViews.right.removeFromSuperview()
             cascadeImageView.removeFromSuperview()
             
             completion?()
         })
         
+    }
+    
+    /// Returns the image view representations for the left and right views
+    fileprivate func imageViewsForCurrentState() -> (left: UIImageView, right: UIImageView) {
+        let leftImageView = UIImageView(frame: leftViewContainer.frame)
+        leftImageView.image = UIImage.image(fromView: leftController?.view)
+        
+        let rightImageView = UIImageView(frame: rightViewContainer.frame)
+        rightImageView.image = UIImage.image(fromView: rightController?.view)
+        
+        return (leftImageView, rightImageView)
+    }
+    
+    /// Returns an image view representation of the passed-in view in the target frame
+    fileprivate func imageViewForPendingView(_ pendingView: UIView, targetFrame: CGRect) -> UIImageView {
+        let tempView = UIView(frame: targetFrame)
+        tempView.fill(withSubview: pendingView)
+        view.addSubview(tempView)
+        
+        let pendingViewImageView = UIImageView(frame: targetFrame)
+        pendingViewImageView.image = UIImage.image(fromView: tempView)
+        view.addSubview(pendingViewImageView)
+        tempView.removeFromSuperview()
+        
+        return pendingViewImageView
     }
     
 }

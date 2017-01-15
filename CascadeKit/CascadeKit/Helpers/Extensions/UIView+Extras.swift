@@ -21,4 +21,11 @@ extension UIView {
         subview.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
     
+    /// Adds an array of views as subviews of the receiver
+    func addSubviews(_ subviews: [UIView]) {
+        subviews.forEach({ subview in
+            self.addSubview(subview)
+        })
+    }
+    
 }

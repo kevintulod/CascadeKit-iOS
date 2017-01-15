@@ -63,14 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				9C8675E41E21828500221662 /* Helpers */,
-				9C8675DF1E217D4700221662 /* CascadeController */,
+				9C8675DF1E217D4700221662 /* Cascade Controller */,
 				9C8675A41E217CC500221662 /* CascadeKit.h */,
 				9C8675A51E217CC500221662 /* Info.plist */,
 			);
 			path = CascadeKit;
 			sourceTree = "<group>";
 		};
-		9C8675DF1E217D4700221662 /* CascadeController */ = {
+		9C8675DF1E217D4700221662 /* Cascade Controller */ = {
 			isa = PBXGroup;
 			children = (
 				9C8675E01E217D6900221662 /* Cascade.storyboard */,
@@ -79,7 +79,7 @@
 				9C8675F51E218B2B00221662 /* CascadeDividerView.swift */,
 				9CABB4A81E2AF86E0030F42E /* UIViewController+CascadeController.swift */,
 			);
-			name = CascadeController;
+			name = "Cascade Controller";
 			sourceTree = "<group>";
 		};
 		9C8675E41E21828500221662 /* Helpers */ = {
