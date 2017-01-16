@@ -16,6 +16,7 @@
 		9CABB4A51E2AD1450030F42E /* CascadeController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */; };
 		9CABB4A71E2AD1B60030F42E /* UIImage+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */; };
 		9CABB4A91E2AF86E0030F42E /* UIViewController+CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4A81E2AF86E0030F42E /* UIViewController+CascadeController.swift */; };
+		9CABB4AB1E2D10C80030F42E /* UINavigationController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABB4AA1E2D10C80030F42E /* UINavigationController+Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9CABB4A41E2AD1450030F42E /* CascadeController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CascadeController+Animations.swift"; path = "Cascade Controller/CascadeController+Animations.swift"; sourceTree = "<group>"; };
 		9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Extras.swift"; path = "Helpers/Extensions/UIImage+Extras.swift"; sourceTree = "<group>"; };
 		9CABB4A81E2AF86E0030F42E /* UIViewController+CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+CascadeController.swift"; path = "Cascade Controller/UIViewController+CascadeController.swift"; sourceTree = "<group>"; };
+		9CABB4AA1E2D10C80030F42E /* UINavigationController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9CABB4A61E2AD1B60030F42E /* UIImage+Extras.swift */,
+				9CABB4AA1E2D10C80030F42E /* UINavigationController+Extras.swift */,
 				9C8675F31E2189E300221662 /* UIScreen+Extras.swift */,
 				9C8675E61E2182A200221662 /* UIView+Extras.swift */,
 			);
@@ -184,6 +187,7 @@
 			files = (
 				9C8675E31E217D9100221662 /* CascadeController.swift in Sources */,
 				9CABB4A51E2AD1450030F42E /* CascadeController+Animations.swift in Sources */,
+				9CABB4AB1E2D10C80030F42E /* UINavigationController+Extras.swift in Sources */,
 				9CABB4A71E2AD1B60030F42E /* UIImage+Extras.swift in Sources */,
 				9CABB4A91E2AF86E0030F42E /* UIViewController+CascadeController.swift in Sources */,
 				9C8675F41E2189E300221662 /* UIScreen+Extras.swift in Sources */,

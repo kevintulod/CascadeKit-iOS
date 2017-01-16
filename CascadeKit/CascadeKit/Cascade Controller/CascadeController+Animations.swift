@@ -59,6 +59,51 @@ extension CascadeController {
         
     }
     
+    /// Performs a cascade animation in the backward direction
+    internal func performBackwardCascadeAnimation(cascadeController: UIViewController, preAnimation: AnimationStageHandler?, postAnimation: AnimationStageHandler?, completion: AnimationStageHandler?) {
+        // Add images of the current state
+        let imageViews = imageViewsForCurrentState()
+        view.addSubviews([imageViews.left, imageViews.right])
+        
+        // Add cascading view image
+        var cascadeFrame = leftViewContainer.frame
+        cascadeFrame.origin.x += cascadeFrame.width
+        let cascadeImageView = imageViewForPendingView(cascadeController.view, targetFrame: cascadeFrame)
+        view.addSubview(cascadeImageView)
+        
+        // Calculate target frames
+        let leftImageViewTargetFrame = rightViewContainer.frame
+        let cascadeImageViewTargetFrame = leftViewContainer.frame
+        var rightImageViewTargetFrame = rightViewContainer.frame
+        rightImageViewTargetFrame.origin.x += rightImageViewTargetFrame.width
+        
+        // Set alphas
+        leftViewContainer.alpha = 0
+        rightViewContainer.alpha = 0
+        
+        preAnimation?()
+        
+        UIView.animate(withDuration: animationDuration, delay: 0, options: [.curveEaseOut],
+                       animations: {
+                        imageViews.left.frame = leftImageViewTargetFrame
+                        imageViews.right.frame = rightImageViewTargetFrame
+                        cascadeImageView.frame = cascadeImageViewTargetFrame
+                        
+                        imageViews.left.alpha = 0.5
+                        self.leftViewContainer.alpha = 1
+                        self.rightViewContainer.alpha = 1
+                        
+        }, completion: { success in
+            postAnimation?()
+            
+            imageViews.left.removeFromSuperview()
+            imageViews.right.removeFromSuperview()
+            cascadeImageView.removeFromSuperview()
+            
+            completion?()
+        })
+    }
+    
     /// Returns the image view representations for the left and right views
     fileprivate func imageViewsForCurrentState() -> (left: UIImageView, right: UIImageView) {
         let leftImageView = UIImageView(frame: leftViewContainer.frame)
