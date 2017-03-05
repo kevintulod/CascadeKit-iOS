@@ -80,15 +80,26 @@ public class CascadeController: UIViewController {
     }
     
     /// Cascades the view controller to the top of the stack
-    public func cascadeViewController(_ cascadeController: UINavigationController) {
-        performForwardCascadeAnimation(cascadeController: cascadeController, preAnimation: { Void in
-            self.addControllerToStack(self.leftController)
-            self.leftController = self.rightController
+    public func cascadeViewController(_ cascadeController: UINavigationController, sender: UINavigationController? = nil) {
+        
+        if sender === leftController {
+            // If the provided sender is the second-to-last in the stack, replace the last controller
+            popControllerFromStack()
+            addControllerToStack(cascadeController)
+            rightController = cascadeController
             
-        }, postAnimation: { Void in
-            self.rightController = cascadeController
+        } else {
+            // All other cases, push the controller to the end
             
-        }, completion: nil)
+            performForwardCascadeAnimation(cascadeController: cascadeController, preAnimation: { Void in
+                self.addControllerToStack(self.leftController)
+                self.leftController = self.rightController
+                
+            }, postAnimation: { Void in
+                self.rightController = cascadeController
+                
+            }, completion: nil)
+        }
     }
     
     /// Pops the last controller off the top of the stack

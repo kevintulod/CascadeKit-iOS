@@ -12,7 +12,7 @@ import UIKit
 extension UIViewController {
     
     /// Provides a reference to the containing CascadeController, if any
-    public var cascadingController: CascadeController? {
+    public var cascadeController: CascadeController? {
         var controller = self
         if let cascadeController = controller as? CascadeController {
             // If self is the CascadeController, return the casted form

@@ -55,6 +55,6 @@ class CascadingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextController = CascadingNavigationController(tableNumber: panelNumber+1)
-        cascadingController?.cascadeViewController(nextController)
+        cascadeController?.cascadeViewController(nextController, sender: navigationController)
     }
 }
