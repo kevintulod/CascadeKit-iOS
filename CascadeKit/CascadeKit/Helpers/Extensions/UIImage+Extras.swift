@@ -11,10 +11,8 @@ import UIKit
 extension UIImage {
     
     /// Creates an image of a UIView in the current context
-    class func image(fromView view: UIView?) -> UIImage? {
-        guard let view = view else {
-            return nil
-        }
+    class func image(from view: UIView?) -> UIImage? {
+        guard let view = view else { return nil }
         
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
         
@@ -28,5 +26,5 @@ extension UIImage {
         
         return image
     }
-    
+
 }

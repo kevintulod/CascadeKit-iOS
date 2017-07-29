@@ -25,7 +25,7 @@ public class CascadeController: UIViewController {
                 return
             }
             addChildViewController(leftController)
-            leftViewContainer.fill(withSubview: leftController.view)
+            leftViewContainer.fill(with: leftController.view)
             leftController.rootViewController?.navigationItem.leftBarButtonItem = nil
         }
     }
@@ -36,7 +36,7 @@ public class CascadeController: UIViewController {
                 return
             }
             addChildViewController(rightController)
-            rightViewContainer.fill(withSubview: rightController.view)
+            rightViewContainer.fill(with: rightController.view)
             
             if controllers.count > 0 {
                 rightController.rootViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(CascadeController.popLastViewController))
@@ -80,18 +80,18 @@ public class CascadeController: UIViewController {
     }
     
     /// Cascades the view controller to the top of the stack
-    public func cascadeViewController(_ cascadeController: UINavigationController, sender: UINavigationController? = nil) {
+    public func cascade(viewController cascadeController: UINavigationController, sender: UINavigationController? = nil) {
         
         if sender === leftController {
             // If the provided sender is the second-to-last in the stack, replace the last controller
-            popControllerFromStack()
+            popLastController()
             addControllerToStack(cascadeController)
             rightController = cascadeController
             
         } else {
             // All other cases, push the controller to the end
             
-            performForwardCascadeAnimation(cascadeController: cascadeController, preAnimation: { Void in
+            animate(withForwardCascadeController: cascadeController, preAnimation: { Void in
                 self.addControllerToStack(self.leftController)
                 self.leftController = self.rightController
                 
@@ -104,18 +104,24 @@ public class CascadeController: UIViewController {
     
     /// Pops the last controller off the top of the stack
     public func popLastViewController() {
-        guard let poppedController = popControllerFromStack() else {
+        guard let poppedController = popLastController() else {
             NSLog("No controller in stack to pop.")
             return
         }
+
+        let newRightController = self.leftController
+        let dismissingController = self.rightController
         
-        performBackwardCascadeAnimation(cascadeController: poppedController, preAnimation: { Void in
-            self.rightController = self.leftController
-            
+        animate(withBackwardCascadeController: poppedController, preAnimation: { Void in
+            self.rightController = newRightController
+
         }, postAnimation: { Void in
             self.leftController = poppedController
             
-        }, completion: nil)
+        }, completion: { Void in
+            dismissingController?.view.removeFromSuperview()
+            dismissingController?.removeFromParentViewController()
+        })
     }
     
     internal func addControllerToStack(_ controller: UINavigationController?) {
@@ -124,7 +130,7 @@ public class CascadeController: UIViewController {
         }
     }
     
-    internal func popControllerFromStack() -> UINavigationController? {
+    @discardableResult internal func popLastController() -> UINavigationController? {
         return controllers.popLast()
     }
     

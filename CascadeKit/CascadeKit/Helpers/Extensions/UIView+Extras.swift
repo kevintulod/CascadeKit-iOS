@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     
     /// Adds the given view as a subview of the receiver and achors the top, bottom, left, and right
-    func fill(withSubview subview: UIView) {
+    func fill(with subview: UIView) {
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
         
